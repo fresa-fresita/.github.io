@@ -1,0 +1,148 @@
+/* Kimi-inspired palette */
+:root {
+  --bg: #fdfdff;
+  --text: #222222;
+  --accent: #6C5CE7;
+  --muted: #8a8a9e;
+  --line: #e6e6f0;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+header {
+  padding: 4rem 1.5rem 3rem;
+  text-align: center;
+  border-bottom: 1px solid var(--line);
+}
+
+header h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  margin-bottom: .25rem;
+}
+
+.tagline {
+  color: var(--muted);
+  font-size: 1.05rem;
+  margin-bottom: 1.5rem;
+}
+
+.contact a {
+  margin: 0 .75rem;
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.contact a:hover {
+  text-decoration: underline;
+}
+
+section {
+  max-width: 780px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1.25rem;
+  font-weight: 600;
+}
+
+#about p {
+  font-size: 1.05rem;
+  color: var(--text);
+}
+
+.timeline {
+  list-style: none;
+  border-left: 2px solid var(--line);
+  padding-left: 1.5rem;
+}
+
+.timeline li {
+  margin-bottom: 2rem;
+  position: relative;
+}
+
+.timeline li::before {
+  content: '';
+  position: absolute;
+  left: -9px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.timeline h3 {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.date {
+  font-size: .9rem;
+  color: var(--muted);
+  display: block;
+  margin-bottom: .25rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card-bg);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  text-align: center;
+  font-weight: 600;
+  color: var(--accent);
+  text-decoration: none;
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(108, 92, 231, .12);
+}
+
+.pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+}
+
+.pills span {
+  background: var(--line);
+  color: var(--text);
+  padding: .35rem .85rem;
+  border-radius: 999px;
+  font-size: .9rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2.5rem 1rem;
+  font-size: .85rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
